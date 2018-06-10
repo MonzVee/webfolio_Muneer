@@ -1,0 +1,124 @@
+{%load staticfiles%} 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Capstone Project</title>
+    <meta charset="utf-8" />
+    <link href="{%static 'task15.css' %}" rel="stylesheet" type"text/css"> 
+     <script type="text/javascript" src="{% static 'task15.js' %}"></script>
+     <script src= "https:ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{%static 'effects15.js' %}"></script>      
+</head>
+<body>    
+    <header>
+        <h1 id="mainHeading">World Class Holidays</h1>     
+    </header>
+     <div class="topnav"  id="myTopnav">
+    <a class="active"    href="http://127.0.0.1:8000/travel2/">Home</a>
+    <a href="Capstone2.html">Specials</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="http://127.0.0.1:8000/travel3/">Shopping Cart</a>
+    </div>
+    <img id="mainPic" src=" {% static 'assets/luggage-1149289_960_720.jpg' %}" alt="luggage" height="200" width="auto"/>
+    <button id = "touch">Click Me</button>
+    <br>
+
+    <br>
+    
+    <section>
+        <article id="art1">
+            <img src=" {% static 'assets/bali.jpg' %}" class ="articlePics" alt="Bali" />
+            <h2 class="articleHeadings">Holiday in Bali!</h2>
+            <p>Nusa Dua Villa's</p>
+            <p>From R12 999 p/p</p>
+            <img src=" {% static 'assets/bali.hotel.jpeg' %}" class="thumbnails" alt="hotel"/>
+            <button id="bali" onclick = "addToCart()">Book Now!</button>
+        </article>
+        <article id="art2">
+            <img src=" {% static 'assets/beach-2858720_960_720.jpg' %}" class ="articlePics" alt="Beach" />
+            <h2 class="articleHeadings">Holiday in Mauritius</h2>
+            <p id ="p1">St Gerain All Inclusive 5 star</p>
+            <p id ="p2"> From R15 000 p/p</p>
+            <button id = "chain">Click</button>
+            <button id = "whoop">Press Me!!</button>
+            <img src=" {% static 'assets/mau-hotels.jpeg' %}" class="thumbnails" alt="hotels"/>
+            <button id="mau" onclick = "addToCart()">Book Now!</button>
+        </article>
+        <article id="art3">
+            <img src=" {% static 'assets/portugal-2423629_960_720.jpg' %}" class ="articlePics" alt="Europe" />
+            <h2 class="articleHeadings">Holiday in London</h2>
+            <p>Trafalgar Royal Hotel</p>
+            <p>From R22 000 p/p</p>
+            <img src=" {% static 'assets/london.hotels.jpeg' %}" class="thumbnails" alt="hotel"/>
+            <button id="london" onclick = "addToCart()">Book Now!</button>
+        </article>        
+    </section>
+    <br>
+
+    <br>
+
+
+
+    <form action="">
+        <input type="radio" name="Payment Type" value="Credit Card"> Credit Card<br>
+        <input type="radio" name="Payment Type" value="EFT"> EFT<br>
+        <input type="radio" name="Payment Type" value="other"Other<br>
+    </form>
+    <p><b>Note:</b> Clients are eligible for a full 100% refund 14 days prior to departure, any cancellations made thereafter would be subject to certain penalties.</p>
+
+    <ul>
+        <li>World Class Holidays</li>
+        <li>
+            Provides
+            <ol>
+                <li>Personalised First Class Door to door Service</li>
+                <li>Making you feel like Royalty</li>
+                <li>Catering for your every travel need</li>
+                <li>from Booking to Transfers </li>
+            </ol>
+        </li>
+        <li>All at a Price that you can Afford!!</li>
+    </ul>
+    
+
+        <h1> Special Fares </h1>
+    
+    <table>
+        <tr>
+            <td>Dates, <b>Europe</b></td>
+            <td>Dates, <b>South East Asia</b></td>
+            <td>Dates, <b>Mauritius</b></td>
+            <td>Dates, <b>South Africa</b></td>
+        </tr>
+        <tr>
+            <td>December/April, Peak</td>
+            <td>December/April, Peak </td>
+            <td>December/April, Peak</td>
+            <td>December/April, Peak</td>
+        </tr>
+        <tr>
+            <td>May/August, Peak</td>
+            <td>May/August, Off-Peak</td>
+            <td>May/August, Off-Peak</td>
+            <td>May/August, Off-Peak</td>
+        </tr>
+        <tr>
+            <td>September/November, Off-Peak</td>
+            <td>September/November, Off-Peak</td>
+            <td>September/November, Off-Peak</td>
+            <td>September/November, Off-Peak</td> 
+        </tr>
+    </table>
+        
+        <button onclick = "store()"><a href="Cart.html">View Cart</a></button>
+
+        <h3>What our guests have to say<h3>
+        <p>John Henry: <q>Our family truly enjoyed our experience right thru from the booking to the after-sales support. World Class Holidays is an absolutley proffessional set-up specialising in family vacay's without the hassle and the fuss. I would highly reccommend them to any prospective travellers.</q></p> 
+    <footer>        
+        <p> &copy; World Class Holidays.&nbsp;&nbsp; All Rights Reserved.&nbsp;&nbsp; Proudly created by <a href="http://www.hyperiondev.com">World Class Holidays</a></p>
+        <p>Last updated: 2 December 2017</p>
+    </footer>  
+</body>
+
+</html>
